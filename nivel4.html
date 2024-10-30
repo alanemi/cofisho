@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Carreras</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #333;
+        }
+        /* Contenedor General */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        /* Navbar */
+        .navbar {
+            background-color: #f0f0f0;
+            padding: 15px;
+            text-align: right;
+        }
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 0.9em;
+        }
+        /* Encabezado */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .header .logo {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        /* Contenido Principal */
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            flex-grow: 1;
+        }
+        /* Sección Hero */
+        .hero {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        .hero-text {
+            flex: 2;
+        }
+        .hero-text h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .hero-image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 50%;
+        }
+        .hero-image-container img {
+            width: 100%;
+            max-width: 350px; /* Tamaño máximo de la imagen */
+            height: auto;
+            border-radius: 8px;
+        }
+        .hero-image-caption {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #555;
+            text-align: center;
+        }
+        /* Sección de Oportunidades */
+        .opportunities {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            gap: 10px;
+        }
+        .opportunity {
+            text-align: center;
+            width: 22%;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .opportunity h3 {
+            font-size: 1em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .opportunity img {
+            width: 100%;
+            max-width: 100px; /* Limitar el tamaño de las imágenes en esta sección */
+            height: 100px;
+            border-radius: 8px;
+        }
+        /* Sección de Exploración */
+        .explore {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            gap: 20px;
+        }
+        .explore-item {
+            text-align: center;
+            width: 24%;
+        }
+        .explore-item img {
+            width: 100%;
+            height: 150px; /* Altura fija para todas las imágenes */
+            object-fit: cover; /* Recorta la imagen para llenar el área */
+            border-radius: 8px;
+        }
+        .explore-item h3 {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        /* Pie de Página */
+        .footer-1 {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="#">Inicio</a>
+            <a href="#">Noticias</a>
+            <a href="#">Galerías</a>
+            <a href="#">Liderazgo</a>
+        </div>
+
+        <!-- Encabezado -->
+        <div class="header">
+            <div class="logo">Mi Compañía</div>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="main-content">
+            <!-- Sección Hero -->
+            <div class="hero">
+                <div class="hero-text">
+                    <h2>La historia de nuestra compañía</h2>
+                    <p class="hero-description">Nuestra historia comienza en la cocina de nuestra abuela, donde descubrimos la magia del café. Con el deseo de compartir esta pasión, decidimos emprender y explorar el mundo del café. Tras meses de investigación y desarrollo, y con el apoyo de la comunidad local, lanzamos nuestra línea de cafés en grano, utilizando solo los mejores granos de cooperativas locales.</p>
+                </div>
+                <div class="hero-image-container">
+                    <img src="https://www.trabajar-en-londres.es/wp-content/uploads/2018/10/trabajo-de-barista.jpg" alt="Personas trabajando en un estudio">
+                    <h3 class="hero-image-caption">Hemos abierto nuestra primera sucursal en el corazón de Valle Verde, un espacio acogedor donde los amantes del café pueden disfrutar de nuestras variedades y aprender más sobre el mundo del café. Nuestro café no solo es un lugar para disfrutar de una buena taza, sino también un centro de comunidad y aprendizaje.</p>
+                </div>
+            </div>
+
+            <!-- Sección de Oportunidades -->
+            <div class="opportunities">
+                <div class="opportunity">
+                    <img src="https://i.pinimg.com/564x/59/ea/d9/59ead9759f22ce3a91be114cbc0e0727.jpg" alt="Newsroom">
+                    <h3>Nuestra primera sucursal </h3>
+                </div>
+                <div class="opportunity">
+                    <img src="https://i.pinimg.com/564x/96/cf/be/96cfbebbc36651c71da58cb5178cc2a0.jpg" alt="Technology">
+                    <h3>nuestro café</h3>
+                </div>
+                <div class="opportunity">
+                    <img src="https://i.pinimg.com/564x/6f/74/3b/6f743b110dab8e728b893bb67c5a72f4.jpg" alt="Product and Design">
+                    <h3>como enviamos nuestro producto</h3>
+                </div>
+                <div class="opportunity">
+                    <img src="https://i.pinimg.com/564x/d4/f4/c6/d4f4c6374883404d82e9a866cc7e2ecb.jpg" alt="Data and Insights">
+                    <h3>nuestro café que tanto te gusta</h3>
+                </div>
+            </div>
+
+            <!-- Sección de Exploración -->
+            <div class="explore">
+                <div class="explore-item">
+                    <img src="https://i.pinimg.com/564x/b5/9b/6e/b59b6ea4ed2df7cdcc1b49b3ec7d6f46.jpg" alt="Journalism">
+                    <a href=""><h3>Inicio</h3></a>
+                </div>
+                <div class="explore-item">
+                    <img src="https://i.pinimg.com/564x/6f/f5/33/6ff533c8051496b3023adf3236064883.jpg" alt="Our People">
+                   <a href=""><h3>Sobre nosotros</h3></a> 
+                </div>
+                <div class="explore-item">
+                    <img src="https://i.pinimg.com/564x/37/f2/f9/37f2f960db984cfb49f68bc92cfc8ed3.jpg" alt="Company">
+                    <a href=""><h3>Oferta de trabajo</h3></a>
+                </div>
+                <div class="explore-item">
+                    <img src="https://i.pinimg.com/564x/19/03/fd/1903fd9eac6971a752e873edcc94366d.jpg" alt="Company">
+                    <a href=""><h3>Conócenos</h3></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie de Página -->
+        <div class="footer-1">
+            <p>MY COMPANY © 2024</p>
+            <p>Links de contacto | Social Media | Términos y Condiciones</p>
+        </div>
+    </div>
+
+</body>
+</html>
