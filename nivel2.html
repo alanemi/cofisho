@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial; 
+        }
+        .div-general {
+            margin: auto;
+            width: 1200px;
+            height: 1800px;
+            
+            display: flex; 
+            flex-direction: column; 
+            background-color: #e0e0e0;
+        }
+
+        .header {
+            text-align: right; 
+            font-size: large;
+            margin-bottom: 10px; 
+            width: 100%; 
+        }
+
+        .header div {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        .section-1 {
+            flex: 1; 
+            
+            padding: 10px; 
+            box-sizing: border-box; 
+            height: 100px; 
+            display: flex;
+            align-items: stretch; 
+        }
+
+        .section-2 {
+            flex: 1; 
+            
+            padding: 10px; 
+            box-sizing: border-box; 
+            height: 100px; 
+            display: flex; 
+            align-items: stretch; 
+        }
+        .section-3 {
+            flex: 1; 
+            
+            padding: 10px; 
+            box-sizing: border-box; 
+            height: 100px; 
+            display: flex; 
+            align-items: stretch; 
+        }
+        
+
+        .sub-section {
+            flex: 1; 
+            
+            padding: 10px; 
+            box-sizing: border-box; 
+            margin: 5px; 
+        }
+
+        .vertical {
+            display: flex; 
+            flex-direction: column; 
+            height: 100%; 
+        }
+
+        .vertical .large {
+            flex: 2; 
+        }
+
+        .small-container {
+            display: flex; 
+            flex: 1; 
+        }
+
+        .small-sub-section {
+            flex: 1; 
+           
+            padding: 10px; 
+            box-sizing: border-box; 
+            margin: 5px; 
+            position: relative; 
+        }
+
+        .small-sub-section:not(:last-child):after {
+            content: ""; 
+            position: absolute;
+            right: -10px; 
+            top: 0;
+            width: 2px; 
+            height: 100%; 
+            
+        }
+
+        .explore-company {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .explore-company .grid-item {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e5e5e5;
+            font-weight: bold;
+            border: 1px solid #ddd;
+            width:250px;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        .footer-1 {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            background-color: orange; 
+            padding: 20px; 
+            min-height: 30px; 
+            text-align: left;
+            font-size: 20px;
+        }
+        .section-ventas {
+            display: flex;
+            height: 300px; 
+            margin-top: 20px;
+        }
+
+        .ventas-left, .ventas-right {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        .ventas-right {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .ventas-item {
+            background-color: #e5e5e5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            font-weight: bold;
+            text-align:center;
+        }
+
+        .navbar {
+            background-color: #f0f0f0;
+            padding: 15px;
+            text-align: right;
+        }
+        .navbar a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-general">
+        <div class="navbar">
+            <a href="#">Inicio</a>
+            <a href="#">Noticias</a>
+            <a href="#">Galerías</a>
+            <a href="#">Liderazgo</a>
+            </div>
+
+        <div class="section-1">
+            <div class="sub-section"><h1>El mejor café del mundo!</h1></div>
+            <div class="sub-section">
+                <div class="vertical">
+                    <div class="sub-section large"><img src="https://i.pinimg.com/564x/49/77/e7/4977e70822cec691182c492194aac5db.jpg" alt=""></div>
+                    <div class="small-container">
+                        <div class="small-sub-section">El café es un ritual que despierta tanto el cuerpo como el alma. Desde el momento en que el agua caliente toca los granos molidos, el aire se llena de su aroma profundo y reconfortante, una promesa de energía y claridad.</div>
+                        <div class="small-sub-section">Es un compañero fiel en las mañanas frías y un pretexto perfecto para una pausa a media tarde. Cada taza cuenta una historia distinta: algunas tienen el dulzor de la caña, otras la intensidad de la tierra volcánica.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<hr>
+        <div class="section-2"> 
+            
+            <div class="sub-section"><h1>El mejor sabor, la mejor calidad!</h1></div>
+            <div class="sub-section">
+                <div class="vertical">
+                    
+                    <div class="small-container">
+                        <div class="small-sub-section">El café es más que una bebida; es una experiencia en cada sorbo. Desde el primer aroma que se libera al moler los granos, hasta el suave sabor que despierta los sentidos, el café nos conecta con lugares lejanos y tiempos antiguos. Los granos de café, cultivados en tierras cálidas y soleadas, capturan en su esencia la riqueza de los suelos y la dedicación de quienes los cultivan. Al beberlo, ya sea en la simplicidad de un espresso o en la dulzura de un capuchino, sentimos una pausa en el tiempo, un momento para reflexionar y disfrutar. Es, en su esencia, una invitación a la calma en medio del ritmo acelerado de la vida.</div>
+                        <div class="small-sub-section"><img src="https://i.pinimg.com/564x/89/33/ed/8933ed34f901bbf0861454863582444a.jpg" alt="" width="110%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer"></footer>
+
+        <div class="section">
+            <h2>Explore Our Company</h2>
+            <div class="explore-company">
+                <img class ="grid-item"src="https://i.pinimg.com/564x/b5/9b/6e/b59b6ea4ed2df7cdcc1b49b3ec7d6f46.jpg"/>
+                <img class ="grid-item"src="https://i.pinimg.com/564x/37/f2/f9/37f2f960db984cfb49f68bc92cfc8ed3.jpg"/>
+                <img class ="grid-item"src="https://img.freepik.com/fotos-premium/despierta-sentidos-disfruta-rico-aroma-cafe-recien-hecho-tentador_531533-1244.jpg"/>
+                <img class ="grid-item"src="https://i.pinimg.com/564x/19/03/fd/1903fd9eac6971a752e873edcc94366d.jpg"/>
+            </div>
+            <div class="explore-company">
+                <a href=""> Inicio</a>
+                <a href="">Oferta de trabajo</a>
+                <a href=""> Nuestra historia!</a>
+                <a href="">Conocenos!</a>
+            </div>
+        </div>
+
+        <div class="section-ventas">
+            
+            <div class="ventas-left">
+                <h2>Nuestras ventas</h2>
+            </div>
+            
+            <div class="ventas-right">
+                <div class="ventas-item"> 2020
+                <br>
+                comenzamos esta empresa con 50,000 ventas
+                </div>
+                <div class="ventas-item">
+                2021
+                <br>Multiplicamos nuestras ventas al doble: 100,023 ventas </div>
+                <div class="ventas-item">
+                2022
+                <br> Hicimos historia! Llegando al medio millon de ventas.</div>
+                <div class="ventas-item">
+                2023
+                <br> Logramos la meta de UN MILLON DE VENTAS</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-1">
+        <p>MY COMPANY © 2024</p>
+        <p>Links de contacto | Social Media | Términos y Condiciones</p></div>
+</body>
+</html>

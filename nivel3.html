@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina 3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .div-general {
+            margin: auto;
+            width: 1200px;
+            height: 1300px;
+            display: flex; 
+            flex-direction: column;
+            background-color: #e0e0e0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #f0f0f0;
+            padding: 15px;
+            text-align: right;
+        }
+        
+        .navbar a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e0e0e0;
+            text-align: center;
+        }
+
+        .first-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: left;
+        }
+
+        .first-section .image-box {
+            width: 40%;
+            height: 200px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .first-section .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .first-section p {
+            width: 40%;
+        }
+
+        .highlight {
+            background-color: #FFA500;
+            padding: 20px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .explore {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .explore .box {
+            width: 32%;
+            background-color: #d0d0d0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .explore .box .image-box {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .explore .box .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .explore .box .description {
+            padding: 15px;
+            text-align: center;
+            background-color: #fff;
+            color: #333;
+            width: 100%;
+        }
+
+        .footer {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .texto-izquierda {
+            align-items: center;
+            margin-right: 170px;
+        }
+        button{
+          background-color: #FFA563;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-general">
+        <div class="navbar">
+            <a href="#">Inicio</a>
+            <a href="#">Noticias</a>
+            <a href="#">Galerías</a>
+            <a href="#">Liderazgo</a>
+        </div>
+
+        <div class="container">
+            <div class="section first-section">
+                <div class="image-box"><img src="https://i.pinimg.com/564x/23/b7/bf/23b7bf89972c3611f3318aef98d1fefc.jpg" alt=""></div>
+                <p>Trabajar en una cafetería es una mezcla de velocidad, precisión y calidez. Cada día comienza con el sonido de la máquina de espresso y el aroma de los granos frescos al molerse, mientras los baristas se preparan para recibir a los primeros clientes.</p>
+            </div>
+
+            <h2>En nuestra compañía trabajar es un lujo!</h2>
+
+            <div class="section">
+                <div class="image-box"><img src="https://i.pinimg.com/564x/45/0f/a7/450fa79e1424adec393414677b80d613.jpg" alt=""></div>
+                <p>Entre pedidos rápidos y sonrisas, cada bebida es preparada con cuidado, desde el espumado de la leche hasta el arte en la superficie del café. Los empleados conocen las preferencias de los clientes frecuentes y logran crear una atmósfera acogedora donde todos se sienten bienvenidos. Es un trabajo que requiere energía constante y atención al detalle, transformando cada taza en una pequeña obra de arte y un momento de conexión.</p>
+            </div>
+
+            <div class="highlight">
+                <button onclick="postular()">POSTULATE AQUÍ</button>
+            </div>
+
+            <div class="explore">
+                <div class="box">
+                    <a href="" class="image-box"><img src="https://i.pinimg.com/564x/7e/9b/33/7e9b331848b16a8cd33d5794c6101823.jpg" alt=""></a>
+                    <div class="description"><a href="">¡Pasar saber sobre nosotros!</a></div>
+                </div>
+                <div class="box">
+                    <a href="" class="image-box"><img src="https://i.pinimg.com/564x/2a/c4/37/2ac437deba58e85a1974b4b7f0f163ad.jpg" alt=""></a>
+                    <div class="description"><a href="">Nuestra historia!</a></div>
+                </div>
+                <div class="box">
+                    <a href="" class="image-box"><img src="https://i.pinimg.com/564x/35/be/61/35be618523056da80ed15d64d0b8ce43.jpg" alt=""></a>
+                    <div class="description"><a href="">¡Para conocer a nuestra familia!</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>MY COMPANY © 2024</p>
+            <p>Links de contacto | Social Media | Términos y Condiciones</p>
+        </div>
+    </div>
+
+    <script>
+    function postular(){ 
+     var correo=prompt("Para recibir información acerca de la vacante, necesitamos tu correo electronico!")
+    var expresionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!expresionCorreo.test(correo)) {
+    alert("El correo ingresado es incorrecto");
+  }else{
+  alert("En breve recibirás un correo con información");
+  }
+    }
+    </script>
+</body>
+
+</html>
